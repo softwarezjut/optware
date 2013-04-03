@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# start wallproxy under screen
+
+cd /opt/root
+screen -c .screenrc -USdm proxy /opt/apps/wallproxy-2.1.14/local/startup.py

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# hosts online and their connections 
+
+arp -a | awk '{STR=$2;sub(/\(/,"",STR);sub(/\)/,"",STR);print "IP " STR " " $1;CMD= "grep -c " STR " /proc/net/ip_conntrack";CNT = system( CMD );}'
+
+
+# {
+# STR=$2
+# sub(/\(/,"",STR)
+# sub(/\)/,"",STR)
+# 
+# print "IP " STR " " $1
+# 
+# CMD= "grep -c " STR " /proc/net/ip_conntrack"
+# 
+# CNT = system( CMD )
+# }

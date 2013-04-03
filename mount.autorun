@@ -1,0 +1,8 @@
+#!/bin/sh
+mount -o bind  /mnt/OPTWARE/optware /opt
+
+sed -i 's/:\/root:/:\/opt\/root:/g' /etc/passwd
+
+# start wallproxy at boot
+iptables -A INPUT -i br0 -p tcp --dport 8086:8088 -j ACCEPT
+/opt/root/bin/startproxy
