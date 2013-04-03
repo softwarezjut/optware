@@ -1,0 +1,21 @@
+startup_message off
+
+hardstatus on
+hardstatus alwayslastline
+#hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}% w %=%{..G} %H %{..Y} %m/%d %C%a "
+#caption always "%{Wb} %H %{Bk}| %{Ck}%-w%50>%{Cb} %n %t %{-}%+w%<%{- Wk}%{Bk} | %=%{Wb} %C "
+#hardstatus string '%{= kg}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?% Lw%?%?%= %{g}]%{=b C}[ %d %M %c ]%{W}'
+#hardstatus string "%c:%s – %-Lw%{=BW}%50>%n%f*%t%{-}%+Lw%< "
+hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+
+# Key binding
+bind  ) select 10
+bind  ! select 11
+bind  @ select 12
+bind \# select 13
+bind \$ select 14
+bind  % select 15
+bind \^ select 16
+bind  & select 17
+bind  * select 18
+bind  ) select 19
